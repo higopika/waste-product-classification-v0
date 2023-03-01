@@ -1,0 +1,6 @@
+path: /home/higopika/Desktop/yolo_v5  # dataset root dir
+train: data/images/train
+val: data/images/val
+
+nc: 2
+names: ['cococola','not cococola']
