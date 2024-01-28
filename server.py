@@ -21,9 +21,11 @@ client_status = 0
     #train.run(data='data.yaml', imgsz=320, weights='yolov5s.pt',epochs = 99)
 
 def send_updated_weight_to_client():
-    file = open("model/weights/best.pt","rb")
-    file_size = os.path.getsize("model/weights/best.pt")
+    file = open("best93_8.pt","rb")
+    file_size = os.path.getsize("best93_8.pt")
+    print("side of text.zip", file_size)
     data = file.read()
+    print("size of data getting sent ", len(data))
     conn.send(b'<WRONG>')
     conn.sendall(data)
     conn.send(b"<END>")
